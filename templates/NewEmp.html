@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Employee Form</h2>
+        <form action="/addemp/" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="employeeNumber">Employee Number:</label>
+                <input type="text" class="form-control" id="employeeNumber" name="employeeNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="employeeName">Employee Name:</label>
+                <input type="text" class="form-control" id="employeeName" name="employeeName" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <input type="text" class="form-control" id="department" name="department" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" class="form-control" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+                <label for="post">Post:</label>
+                <input type="text" class="form-control" id="post" name="post" required>
+            </div>
+            <div class="form-group">
+                <label for="salary">Salary:</label>
+                <input type="number" class="form-control" id="salary" name="salary" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
